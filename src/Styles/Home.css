@@ -1,0 +1,70 @@
+.home{
+background-color: whitesmoke;
+font-size: larger;
+font-family:poppins, sans-serif;
+}
+.home-data{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px; 
+    flex-wrap: wrap;
+    padding: 100px;
+    box-sizing: border-box;
+}
+
+.home img {
+    -webkit-animation: morph 8s ease-in-out infinite;
+    animation: morph 8s ease-in-out infinite;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 3px solid #2d2e32;
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    height: 25rem;
+    position: relative;
+    transition: all 1s ease-in-out;
+    width: 25rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@-webkit-keyframes morph {
+    /* WebKit Prefix for animation keyframes */
+    0% {
+        /* Define initial state */
+        transform: scale(1);
+    }
+    50% {
+        /* Define mid-animation state */
+        transform: scale(1.1);
+    }
+    100% {
+        /* Define final state */
+        transform: scale(1);
+    }
+}
+
+@keyframes morph {
+    /* Standard keyframes */
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.skills{
+    font-size: 30px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}

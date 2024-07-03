@@ -1,0 +1,12 @@
+.projects{
+    background-color: whitesmoke;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: sans-serif;
+    padding: 100px;
+    box-sizing: border-box;
+}

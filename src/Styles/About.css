@@ -1,0 +1,20 @@
+.about{
+    background-color: white;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    font-family: poppins,sans-serif;
+    padding: 150px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+.about img{
+    width: 500px;
+    height: 450px;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}

@@ -1,0 +1,20 @@
+.footer{
+    width: 100%;
+    height: auto;
+    background-color: rgb(119, 127, 124);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    margin-top: 200px;
+    gap: 600px;
+    font-family: sans-serif;
+    flex-wrap: wrap;
+    color: white;
+    font-size: larger;
+}
+.icons svg{
+width: 30px;
+height: 30px;
+margin: 10px;
+}
