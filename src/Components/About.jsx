@@ -1,8 +1,21 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import '../Styles/About.css'
 import computer from './computer.jpg'
+import axios from 'axios'
 
 function About() {
+
+  useEffect(()=>{
+    
+     let fetchdata = async() =>{
+      let response = await axios.get('https://jsonplaceholder.typicode.com/users')
+      console.log(response.data);
+
+
+     }
+fetchdata()
+  },[]) 
+ 
   return (
     <div className='about'>
       <div className="about-img">
