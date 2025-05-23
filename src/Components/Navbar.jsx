@@ -1,75 +1,63 @@
-import React, { useEffect, useState } from 'react'
-import {Link, useLocation} from 'react-router-dom'
-import '../Styles/Navbar.css'
-import { IoReorderThreeSharp } from "react-icons/io5";
+import React, { useState } from 'react';
+import { Menu, X } from 'lucide-react';
 
+const Navbar = () => {
+  const [navOpen, setNavOpen] = useState(false);
 
-// import Container from 'react-bootstrap/Container';
-// import Nav from 'react-bootstrap/Nav';
-// import Navbar from 'react-bootstrap/Navbar';
-// import NavDropdown from 'react-bootstrap/NavDropdown';
+  const navItems = [  
+    { id: 1, label: 'Home', to: '#home' },
+    { id: 2, label: 'Work', to: '#project' },
+    { id: 3, label: 'About', to: '#about' },
+    { id: 4, label: 'Contact', to: '#contact' },
+  ];
 
-// function BasicExample() {
-//   return (
-//     <Navbar expand="lg" className="bg-body-tertiary">
-//       <Container>
-//         <Navbar.Brand href="#home">Amin.dev</Navbar.Brand>
-//         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-//         <Navbar.Collapse id="basic-navbar-nav">
-//         <h4>
-//              <Link to='/'> Home </Link>
-//              <Link to='/about'> About </Link>
-//              <Link to='/project'> Project </Link>
-//              <Link to='/contact'> Contact </Link>
-//              </h4>
-//             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-//               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-//               <NavDropdown.Item href="#action/3.2">
-//                 Another action
-//               </NavDropdown.Item>
-//               <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-//               <NavDropdown.Divider />
-//               <NavDropdown.Item href="#action/3.4">
-//                 Separated link
-//               </NavDropdown.Item>
-//             </NavDropdown>
-//         </Navbar.Collapse>
-//       </Container>
-//     </Navbar>
-//   );
-// }
-
-// export default BasicExample;
-
-
-function Navbar() {
-
-  const [expandNavbar, setExpandNavbar] = useState(false)
-
-  const location = useLocation()
-
-  useEffect(() => {
-    setExpandNavbar(false)
-  }, [location])
+  const handleClick = () => setNavOpen(false);
 
   return (
-    <div className='navbar' id={expandNavbar ? 'open' : 'close'}>
-              <h4>Amin.dev</h4>
-        <div className="toggleButton"> 
-        <button onClick={() => { setExpandNavbar((prev) => !prev)}}>
-           <IoReorderThreeSharp/> 
-           </button>
-        </div>
-        <div className={"links ${expandNavbar ? 'show' : 'hide'}"}>
-          <h4>
-            <Link to='/home'> Home </Link>
-            <Link to='/about'> About </Link>
-            <Link to='/project'> Project </Link>
-            <Link to='/contact'> Contact </Link>
-            </h4>
-        </div>
-    </div>
-  )
-}
+    <nav className="fixed top-0 w-full z-50 bg-white shadow-md">
+      <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+        <div className="text-2xl font-bold text-blue-600">Amin.Dev</div>
 
-export default Navbar
+        {/* Desktop nav */}
+        <ul className="hidden md:flex gap-8">
+          {navItems.map(({ id, label, to }) => (
+            <li key={id}>
+              <a
+                href={to}
+                className="cursor-pointer text-gray-700 hover:text-blue-500 transition font-medium"
+              >
+                {label}
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        {/* Mobile nav toggle */}
+        <div className="md:hidden">
+          <button onClick={() => setNavOpen(!navOpen)}>
+            {navOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile nav menu */}
+      {navOpen && (
+        <ul className="md:hidden bg-white shadow-lg px-4 py-6 space-y-4">
+          {navItems.map(({ id, label, to }) => (
+            <li key={id}>
+              <a
+                href={to}
+                onClick={handleClick}
+                className="block text-gray-700 hover:text-blue-500 transition font-medium"
+              >
+                {label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      )}
+    </nav>
+  );
+};
+
+export default Navbar;

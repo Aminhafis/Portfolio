@@ -1,31 +1,22 @@
- import './App.css';
- import { BrowserRouter, Routes, Route } from "react-router-dom";
- import Home from './Components/Home';
- import About from './Components/About';
- import Project from './Components/Project';
- import Contact from './Components/Contact';
- import Navbar from './Components/Navbar';
- import Footer from './Components/Footer';
-import Layout from './Components/Layout';
+import React from 'react';
+import Navbar from './Components/Navbar';
+import Home from './Components/Home';
+import Project from './Components/Project';
+import About from './Components/About';
+import Contact from './Components/Contact';
+import Footer from './Components/Footer';
+import './App.css';
 
 function App() {
   return (
-    <div>
-
-  <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<Layout/>}>
-          <Route index element={<Home/>}/>
-          <Route path='home' element={<Home/>}/>
-          <Route path='about' element={<About/>}/>
-          <Route path='project' element={<Project/>}/>
-          <Route path='contact' element={<Contact/>}/>
-        </Route>
-      </Routes>
-      </BrowserRouter>
+    <div className="scroll-smooth">
+      <Navbar />
+      <section id="home" className="pt-20"><Home /></section>
+      <section id="project" className="pt-20"><Project /></section>
+      <section id="about" className="pt-20"><About /></section>
+      <section id="contact" className="pt-20"><Contact /></section>
+      <Footer />
     </div>
-      
-
   );
 }
 

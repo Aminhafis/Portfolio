@@ -1,16 +1,18 @@
-import React from 'react'
-import Navbar from './Navbar'
-import { Outlet } from 'react-router-dom'
-import Footer from './Footer'
+import React from 'react';
+import Navbar from './Navbar';
+import { Outlet } from 'react-router-dom';
+import Footer from './Footer';
 
 function Layout() {
   return (
-    <div>
-      <Navbar/>
-      <Outlet/>
-      <Footer/>
+    <div className="min-h-screen flex flex-col">
+      <Navbar />
+      <main className="flex-grow pt-16">
+        <Outlet />
+      </main>
+      <Footer />
     </div>
-  )
+  );
 }
 
-export default Layout
+export default Layout;
