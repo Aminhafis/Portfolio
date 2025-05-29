@@ -24,10 +24,10 @@ function Contact() {
           <HiOutlineMail className="text-blue-500 text-3xl" />
           <div className="text-left">
             <a
-              href="mailto:aminhafis2@gmail.com"
+              href="mailto:aminhafis875@gmail.com"
               className="text-blue-400 hover:underline"
             >
-              aminhafis2@gmail.com
+              aminhafis875@gmail.com
             </a>
           </div>
         </div>
@@ -35,7 +35,7 @@ function Contact() {
 
       {/* CTA Button */}
       <motion.a
-  href="mailto:aminhafis2@gmail.com"
+  href="mailto:aminhafis875@gmail.com"
   className="inline-block bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-full text-white font-medium mb-10"
   initial={{ opacity: 0, scale: 0.9 }}
   whileInView={{ opacity: 1, scale: 1 }}

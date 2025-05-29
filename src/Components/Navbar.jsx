@@ -14,7 +14,7 @@ const Navbar = () => {
   const handleClick = () => setNavOpen(false);
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-white shadow-md">
+    <nav className="fixed top-0 w-full z-50 bg-white shadow-md font-bebas">
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
         <div className="text-2xl font-bold text-blue-600">Amin.Dev</div>
 
