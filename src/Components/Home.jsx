@@ -1,6 +1,6 @@
 import React from 'react';
-// import about from './about.jpg';
-import Amin from '../Components/Amin3.jpeg'
+import about from './about.jpg';
+// import Amin from '../Components/Portfolio.png'
 import { motion } from 'framer-motion';
 
 function Home() {
@@ -24,10 +24,10 @@ function Home() {
   className="w-fit ml-20"
 >
   <motion.img
-    src={Amin}
+    src={about}
     alt="Profile"
-    className="w-[20rem] h-[20rem] border-[1px] border-neutral-400 animate-morph object-cover"
-    style={{ borderRadius: "60% 40% 30% 70% / 60% 30% 70% 40%" }}
+    className="w-[20rem] h-[20rem] border-[1px] border-neutral-400 animate-morph object-cover bg-slate-100 ml-28"
+    style={{ borderRadius: "60% 40% 30% 70% / 60% 30% 70% 40%"}}
   />
   <p className="text-xl text-gray-400 pt-10 font-medium hover:text-blue-700">
     <strong className="text-slate-800 hover:text-blue-700">#</strong> Building real-world solutions with modern JavaScript 🛠️.
