@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import React, { useState } from "react";
+import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [navOpen, setNavOpen] = useState(false);
 
-  const navItems = [  
-    { id: 1, label: 'Home', to: '#home' },
-    { id: 2, label: 'Work', to: '#project' },
-    { id: 3, label: 'About', to: '#about' },
-    { id: 4, label: 'Contact', to: '#contact' },
+  const navItems = [
+    { id: 1, label: "Home", to: "#home" },
+    { id: 2, label: "Work", to: "#project" },
+    { id: 3, label: "About", to: "#about" },
+    { id: 4, label: "Contact", to: "#contact" },
   ];
 
   const handleClick = () => setNavOpen(false);

@@ -1,16 +1,16 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Github, Link as LinkIcon } from 'lucide-react';
-import BookStore from './BookStore.png'; // Project 1 image
-import foodOrdering from './qurettoHome.jpg'
+import React from "react";
+import { motion } from "framer-motion";
+import { Github, Link as LinkIcon } from "lucide-react";
+import BookStore from "./BookStore.png"; // Project 1 image
+import foodOrdering from "./qurettoHome.jpg";
 
 function Project() {
   return (
     <section className="bg-[#0F172A] text-white py-16 px-6 md:px-12 space-y-32">
       {/* AM Bookstore */}
-      <motion.div 
-        initial={{ opacity: 0, y: 60 }} 
-        whileInView={{ opacity: 1, y: 0 }} 
+      <motion.div
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12"
       >
@@ -40,11 +40,14 @@ function Project() {
           </h2>
 
           <p className="text-lg md:text-xl mb-6 text-gray-300">
-            A full-stack online bookstore built with the MERN stack. Browse, search, and purchase books with full admin features, user auth, cart, and secure checkout.
+            A full-stack online bookstore built with the MERN stack. Browse,
+            search, and purchase books with full admin features, user auth,
+            cart, and secure checkout.
           </p>
 
           <p className="uppercase tracking-wider text-gray-400">
-          MongoDB • &nbsp; Express.js • &nbsp; React &nbsp; • &nbsp; Node.js &nbsp; 
+            MongoDB • &nbsp; Express.js • &nbsp; React &nbsp; • &nbsp; Node.js
+            &nbsp;
           </p>
         </div>
 
@@ -61,12 +64,12 @@ function Project() {
       </motion.div>
 
       {/* Minimal Separator */}
-<div className="h-px bg-gray-300/20 w-full max-w-5xl mx-auto"></div>
+      <div className="h-px bg-gray-300/20 w-full max-w-5xl mx-auto"></div>
 
       {/* Quretto Cafe */}
-      <motion.div 
-        initial={{ opacity: 0, y: 60 }} 
-        whileInView={{ opacity: 1, y: 0 }} 
+      <motion.div
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
         className="max-w-7xl mx-auto flex flex-col lg:flex-row-reverse items-center gap-12"
       >
@@ -96,7 +99,8 @@ function Project() {
           </h2>
 
           <p className="text-lg md:text-xl mb-6 text-gray-300">
-            A food recipe app built using TheMealDB API. Users can explore meals by category, view details, and enjoy a vibrant, responsive UI.
+            A food recipe app built using TheMealDB API. Users can explore meals
+            by category, view details, and enjoy a vibrant, responsive UI.
           </p>
 
           <p className="uppercase tracking-wider text-gray-400">

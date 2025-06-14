@@ -1,7 +1,7 @@
-import React from 'react';
-import { HiOutlineMail } from 'react-icons/hi';
-import { FaLinkedin, FaGithub } from 'react-icons/fa';
-import { motion } from 'framer-motion';
+import React from "react";
+import { HiOutlineMail } from "react-icons/hi";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 function Contact() {
   return (
@@ -14,7 +14,8 @@ function Contact() {
     >
       <h2 className="text-4xl font-bold text-white mb-2">Let's Connect</h2>
       <p className="text-lg text-gray-300 mb-10">
-        Got a question, proposal, or just want to say hello? I'm open to collaborations and opportunities.
+        Got a question, proposal, or just want to say hello? I'm open to
+        collaborations and opportunities.
       </p>
 
       {/* Contact Info */}
@@ -35,16 +36,15 @@ function Contact() {
 
       {/* CTA Button */}
       <motion.a
-  href="mailto:aminhafis875@gmail.com"
-  className="inline-block bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-full text-white font-medium mb-10"
-  initial={{ opacity: 0, scale: 0.9 }}
-  whileInView={{ opacity: 1, scale: 1 }}
-  whileHover={{ scale: 1.05 }}
-  transition={{ duration: 0.4, type: "spring", stiffness: 100 }}
->
-  Send Me an Email
-</motion.a>
-
+        href="mailto:aminhafis875@gmail.com"
+        className="inline-block bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-full text-white font-medium mb-10"
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        whileHover={{ scale: 1.05 }}
+        transition={{ duration: 0.4, type: "spring", stiffness: 100 }}
+      >
+        Send Me an Email
+      </motion.a>
 
       {/* Social Icons */}
       <div className="flex justify-center gap-6 mt-6">
