@@ -15,7 +15,7 @@ function Project() {
         className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12"
       >
         {/* Text Section */}
-        <div className="flex-1">
+        <div className="flex-1 cursor-pointer">
           <div className="flex items-center gap-4 mb-6">
             <a
               href="https://github.com/Aminhafis/bookstore-project"
@@ -35,17 +35,17 @@ function Project() {
             </a>
           </div>
 
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight hover:text-neutral-300">
             AM Bookstore
           </h2>
 
-          <p className="text-lg md:text-xl mb-6 text-gray-300">
+          <p className="text-lg md:text-xl mb-6 text-gray-300 ">
             A full-stack online bookstore built with the MERN stack. Browse,
             search, and purchase books with full admin features, user auth,
             cart, and secure checkout.
           </p>
 
-          <p className="uppercase tracking-wider text-gray-400">
+          <p className="uppercase tracking-wider text-gray-400 hover:text-blue-500">
             MongoDB • &nbsp; Express.js • &nbsp; React &nbsp; • &nbsp; Node.js
             &nbsp;
           </p>
@@ -74,7 +74,7 @@ function Project() {
         className="max-w-7xl mx-auto flex flex-col lg:flex-row-reverse items-center gap-12"
       >
         {/* Text Section */}
-        <div className="flex-1">
+        <div className="flex-1 cursor-pointer">
           <div className="flex items-center gap-4 mb-6">
             <a
               href="https://github.com/Aminhafis/quretto-cafe"
@@ -94,7 +94,7 @@ function Project() {
             </a>
           </div>
 
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight hover:text-neutral-300">
             Quretto Cafe
           </h2>
 
@@ -103,7 +103,7 @@ function Project() {
             by category, view details, and enjoy a vibrant, responsive UI.
           </p>
 
-          <p className="uppercase tracking-wider text-gray-400">
+          <p className="uppercase tracking-wider text-gray-400 hover:text-yellow-600">
             React &nbsp; • &nbsp; Tailwind CSS &nbsp; • &nbsp; API Integration
           </p>
         </div>
