@@ -33,7 +33,7 @@ function Home() {
           <AnimatePresence mode="wait">
             <motion.span
               key={titles[currentTitle]}
-              className="bg-gradient-to-r from-indigo-600 to-blue-400 bg-clip-text text-transparent"
+              className="bg-gradient-to-r from-neutral-800 to-gray-200 bg-clip-text text-transparent"
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 10 }}
@@ -43,7 +43,7 @@ function Home() {
             </motion.span>
           </AnimatePresence>
           <motion.div
-            className="h-[3px] bg-gradient-to-r from-indigo-600 to-blue-400 mt-2 rounded-full"
+            className="h-[3px] bg-gradient-to-r from-neutral-600 to-blue-300 mt-2 rounded-full"
             layoutId="underline"
             initial={{ width: 0 }}
             animate={{ width: "100%" }}
@@ -98,7 +98,7 @@ function Home() {
 
           <div className="relative group cursor-pointer">
             <a
-              href="/Amin_Resume.pdf"
+              href="/Amin Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               title="View Resume"
@@ -132,13 +132,13 @@ function Home() {
           <button
             onClick={() => {
               const link = document.createElement("a");
-              link.href = "/Amin_Resume.pdf";
-              link.download = "Amin_Resume.pdf";
+              link.href = "/Amin Resume.pdf";
+              link.download = "Amin Resume.pdf";
               document.body.appendChild(link);
               link.click();
               document.body.removeChild(link);
             }}
-            className="mt-10 px-6 py-2 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition"
+            className="mt-10 px-6 py-2 bg-gradient-to-r from-neutral-600 to-gray-400 text-white rounded-full hover:from-black hover:to-blue transition"
           >
             Download Resume
           </button>

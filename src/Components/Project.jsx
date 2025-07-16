@@ -85,7 +85,7 @@ function Project() {
               <Github size={24} />
             </a>
             <a
-              href="https://food-ordering-livid-seven.vercel.app/"
+              href="https://quretto-cafe.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white text-gray-800 rounded-full p-3 hover:scale-105 transition"
