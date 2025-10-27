@@ -4,8 +4,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FaGithub, FaLinkedin, FaEnvelope, FaFileAlt } from "react-icons/fa";
 
 const titles = [
-  "Creative Front-End Developer 💡",
-  "Aspiring Backend Developer ⚙️",
+  "Creative Front-End Developer ",
+  "Aspiring Backend Developer ",
 ];
 
 function Home() {

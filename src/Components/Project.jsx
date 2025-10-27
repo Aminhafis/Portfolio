@@ -3,18 +3,17 @@ import { motion } from "framer-motion";
 import { Github, Link as LinkIcon } from "lucide-react";
 import BookStore from "./BookStore.png"; // Project 1 image
 import foodOrdering from "./qurettoHome.jpg";
+import agentDistribution from "./agentdistributionBg.png"
 
 function Project() {
   return (
     <section className="bg-[#0F172A] text-white py-16 px-6 md:px-12 space-y-32">
-      {/* AM Bookstore */}
       <motion.div
         initial={{ opacity: 0, y: 60 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12"
       >
-        {/* Text Section */}
         <div className="flex-1 cursor-pointer">
           <div className="flex items-center gap-4 mb-6">
             <a
@@ -51,7 +50,6 @@ function Project() {
           </p>
         </div>
 
-        {/* Image Section */}
         <div className="flex-1">
           <motion.img
             src={BookStore}
@@ -63,17 +61,15 @@ function Project() {
         </div>
       </motion.div>
 
-      {/* Minimal Separator */}
       <div className="h-px bg-gray-300/20 w-full max-w-5xl mx-auto"></div>
 
-      {/* Quretto Cafe */}
       <motion.div
         initial={{ opacity: 0, y: 60 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
         className="max-w-7xl mx-auto flex flex-col lg:flex-row-reverse items-center gap-12"
       >
-        {/* Text Section */}
+
         <div className="flex-1 cursor-pointer">
           <div className="flex items-center gap-4 mb-6">
             <a
@@ -108,7 +104,6 @@ function Project() {
           </p>
         </div>
 
-        {/* Image Section */}
         <div className="flex-1">
           <motion.img
             src={foodOrdering}
@@ -118,6 +113,58 @@ function Project() {
             transition={{ type: "spring", stiffness: 100 }}
           />
         </div>
+      </motion.div>
+
+      <div className="h-px bg-gray-300/20 w-full max-w-5xl mx-auto"></div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+        className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12"
+      >
+        <div className="flex-1 cursor-pointer">
+  <div className="flex items-center gap-4 mb-6">
+    <a
+      href="https://github.com/Aminhafis/agent_distribution_app"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="bg-white text-gray-800 rounded-full p-3 hover:scale-105 transition"
+    >
+      <Github size={24} />
+    </a>
+    <a
+      href="https://agent-distribution-app.vercel.app/"
+      rel="noopener noreferrer"
+      className="bg-white text-gray-800 rounded-full p-3 hover:scale-105 transition"
+    >
+      <LinkIcon size={24} />
+    </a>
+  </div>
+
+  <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight hover:text-neutral-300">
+    Agent Distribution App
+  </h2>
+
+  <p className="text-lg md:text-xl mb-6 text-gray-300">
+  Developed a responsive platform to upload and manage contact lists, validate data, and smartly distribute leads among agents — featuring smooth video previews and a futuristic white–black UI.  </p>
+
+  <p className="uppercase tracking-wider text-gray-400 hover:text-green-500">
+    React &nbsp; • &nbsp; Vite &nbsp; • &nbsp; Node.js &nbsp; • &nbsp; Express.js &nbsp; • &nbsp; MongoDB &nbsp; • &nbsp; Tailwind CSS
+  </p>
+</div>
+
+{/* Image Section */}
+<div className="flex-1">
+  <motion.img
+    src={agentDistribution}  // Ensure this is a screenshot of your A-flix app (e.g., intro screen or movie grid)
+    alt="Agent Distribution App Screenshot"
+    className="rounded-xl shadow-lg w-full object-cover"
+    whileHover={{ scale: 1.02 }}
+    transition={{ type: "spring", stiffness: 100 }}
+  />
+</div>
+
       </motion.div>
     </section>
   );
