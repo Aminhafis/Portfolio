@@ -1,171 +1,167 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Github, Link as LinkIcon } from "lucide-react";
-import BookStore from "./BookStore.png"; // Project 1 image
+import { FiArrowUpRight, FiGithub } from "react-icons/fi";
+import BookStore from "./BookStore.png";
 import foodOrdering from "./qurettoHome.jpg";
-import agentDistribution from "./agentdistributionBg.png"
+import agentDistribution from "./agentdistributionBg.png";
+
+const projects = [
+  {
+    id: "01",
+    title: "AM Bookstore",
+    subtitle: "Full-Stack MERN eCommerce Platform",
+    description:
+      "A complete online bookstore solution engineered with the MERN stack. Features comprehensive administrative inventory management, secure JWT authentication, dynamic search and categorization, persistent shopping cart, and streamlined order checkout.",
+    tags: ["MongoDB", "Express.js", "React 18", "Node.js", "Tailwind CSS", "JWT Auth"],
+    image: BookStore,
+    liveUrl: "https://am-bookstore.vercel.app/",
+    githubUrl: "https://github.com/Aminhafis/bookstore-project",
+    year: "2024",
+  },
+  {
+    id: "02",
+    title: "Quretto Cafe",
+    subtitle: "Interactive Culinary Discovery & Recipe Engine",
+    description:
+      "A fast, responsive recipe platform built atop TheMealDB REST API. Engineered with client-side category filtering, dynamic ingredient breakdowns, smooth animated transitions, and an intuitive culinary browsing experience.",
+    tags: ["React 18", "TheMealDB API", "Tailwind CSS", "Framer Motion", "Axios"],
+    image: foodOrdering,
+    liveUrl: "https://quretto-cafe.vercel.app/",
+    githubUrl: "https://github.com/Aminhafis/quretto-cafe",
+    year: "2024",
+  },
+  {
+    id: "03",
+    title: "Agent Distribution System",
+    subtitle: "Scalable Task Allocation & Agent Dashboard",
+    description:
+      "A modern operations dashboard crafted for real-time agent distribution workflows. Focuses on data density, clean metric cards, responsive tables, and intuitive status monitoring for automated processes.",
+    tags: ["React", "State Management", "Tailwind CSS", "REST API", "Lucide Icons"],
+    image: agentDistribution,
+    liveUrl: "https://github.com/Aminhafis",
+    githubUrl: "https://github.com/Aminhafis",
+    year: "2024",
+  },
+];
 
 function Project() {
   return (
-    <section className="bg-[#0F172A] text-white py-16 px-6 md:px-12 space-y-32">
-      <motion.div
-        initial={{ opacity: 0, y: 60 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12"
-      >
-        <div className="flex-1 cursor-pointer">
-          <div className="flex items-center gap-4 mb-6">
-            <a
-              href="https://github.com/Aminhafis/bookstore-project"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-white text-gray-800 rounded-full p-3 hover:scale-105 transition"
-            >
-              <Github size={24} />
-            </a>
-            <a
-              href="https://am-bookstore.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-white text-gray-800 rounded-full p-3 hover:scale-105 transition"
-            >
-              <LinkIcon size={24} />
-            </a>
+    <section id="project" className="relative py-28 border-t border-white/[0.08]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8">
+        
+        {/* Section Header */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-20">
+          <div>
+            <div className="flex items-center gap-2 mb-3">
+              <span className="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
+              <span className="font-mono text-xs uppercase tracking-widest text-zinc-400">
+                01 {"//"} INDEX
+              </span>
+            </div>
+            <h2 className="text-3xl sm:text-5xl font-light tracking-tight text-white">
+              Selected <span className="font-medium text-transparent bg-clip-text bg-gradient-to-r from-white to-zinc-400">Works</span>
+            </h2>
           </div>
 
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight hover:text-neutral-300">
-            AM Bookstore
-          </h2>
-
-          <p className="text-lg md:text-xl mb-6 text-gray-300 ">
-            A full-stack online bookstore built with the MERN stack. Browse,
-            search, and purchase books with full admin features, user auth,
-            cart, and secure checkout.
-          </p>
-
-          <p className="uppercase tracking-wider text-gray-400 hover:text-blue-500">
-            MongoDB • &nbsp; Express.js • &nbsp; React &nbsp; • &nbsp; Node.js
-            &nbsp;
+          <p className="font-mono text-xs text-zinc-400 max-w-md leading-relaxed">
+            A curated showcase of production applications and full-stack software built with performance, usability, and rigorous code structure.
           </p>
         </div>
 
-        <div className="flex-1">
-          <motion.img
-            src={BookStore}
-            alt="Bookstore App Screenshot"
-            className="rounded-xl shadow-lg w-full object-cover"
-            whileHover={{ scale: 1.02 }}
-            transition={{ type: "spring", stiffness: 100 }}
-          />
-        </div>
-      </motion.div>
-
-      <div className="h-px bg-gray-300/20 w-full max-w-5xl mx-auto"></div>
-
-      <motion.div
-        initial={{ opacity: 0, y: 60 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-        className="max-w-7xl mx-auto flex flex-col lg:flex-row-reverse items-center gap-12"
-      >
-
-        <div className="flex-1 cursor-pointer">
-          <div className="flex items-center gap-4 mb-6">
-            <a
-              href="https://github.com/Aminhafis/quretto-cafe"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-white text-gray-800 rounded-full p-3 hover:scale-105 transition"
+        {/* Project Case Studies */}
+        <div className="space-y-24">
+          {projects.map((project, index) => (
+            <motion.div
+              key={project.id}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="group relative grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center p-6 sm:p-10 rounded-2xl bg-charcoal-850/40 border border-white/[0.06] hover:border-white/[0.14] transition-all duration-500 backdrop-blur-sm"
             >
-              <Github size={24} />
-            </a>
-            <a
-              href="https://quretto-cafe.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-white text-gray-800 rounded-full p-3 hover:scale-105 transition"
-            >
-              <LinkIcon size={24} />
-            </a>
-          </div>
+              {/* Left / Info Column */}
+              <div className="lg:col-span-5 flex flex-col justify-between space-y-6">
+                <div>
+                  {/* Meta Bar */}
+                  <div className="flex items-center justify-between font-mono text-xs text-zinc-500 pb-4 mb-5 border-b border-white/[0.06]">
+                    <span className="text-amber-400/90 font-medium">{project.id} {"//"} PROJECT</span>
+                    <span>{project.year}</span>
+                  </div>
 
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight hover:text-neutral-300">
-            Quretto Cafe
-          </h2>
+                  {/* Title & Subtitle */}
+                  <h3 className="text-2xl sm:text-3xl font-light text-white group-hover:text-amber-300 transition-colors">
+                    {project.title}
+                  </h3>
+                  <div className="text-xs font-mono text-zinc-400 mt-1 mb-4">
+                    {project.subtitle}
+                  </div>
 
-          <p className="text-lg md:text-xl mb-6 text-gray-300">
-            A food recipe app built using TheMealDB API. Users can explore meals
-            by category, view details, and enjoy a vibrant, responsive UI.
-          </p>
+                  {/* Narrative Description */}
+                  <p className="text-sm text-zinc-400 font-light leading-relaxed">
+                    {project.description}
+                  </p>
+                </div>
 
-          <p className="uppercase tracking-wider text-gray-400 hover:text-yellow-600">
-            React &nbsp; • &nbsp; Tailwind CSS &nbsp; • &nbsp; API Integration
-          </p>
+                {/* Tech Tags */}
+                <div className="flex flex-wrap gap-1.5 pt-2">
+                  {project.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="px-2.5 py-1 rounded bg-white/[0.03] border border-white/[0.06] font-mono text-[11px] text-zinc-400"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Action Links */}
+                <div className="flex items-center gap-4 pt-4">
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white text-charcoal-950 font-mono text-xs font-medium hover:bg-zinc-200 transition-all hover:scale-105"
+                  >
+                    <span>VISIT SITE</span>
+                    <FiArrowUpRight size={14} />
+                  </a>
+
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 text-zinc-300 hover:text-white font-mono text-xs transition"
+                  >
+                    <FiGithub size={14} />
+                    <span>SOURCE</span>
+                  </a>
+                </div>
+              </div>
+
+              {/* Right / Mockup Media Column */}
+              <div className="lg:col-span-7">
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block relative rounded-xl overflow-hidden border border-white/[0.08] shadow-2xl group/media bg-charcoal-950"
+                >
+                  <motion.img
+                    src={project.image}
+                    alt={`${project.title} Preview`}
+                    className="w-full h-auto max-h-[440px] object-cover object-top transition-transform duration-700 ease-out group-hover/media:scale-[1.03]"
+                    whileHover={{ scale: 1.02 }}
+                    transition={{ duration: 0.4 }}
+                  />
+                  {/* Subtle glass reflection gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950/80 via-transparent to-transparent opacity-40 group-hover/media:opacity-20 transition-opacity"></div>
+                </a>
+              </div>
+            </motion.div>
+          ))}
         </div>
 
-        <div className="flex-1">
-          <motion.img
-            src={foodOrdering}
-            alt="Quretto Cafe App Screenshot"
-            className="rounded-xl shadow-lg w-full object-cover"
-            whileHover={{ scale: 1.02 }}
-            transition={{ type: "spring", stiffness: 100 }}
-          />
-        </div>
-      </motion.div>
-
-      <div className="h-px bg-gray-300/20 w-full max-w-5xl mx-auto"></div>
-
-      <motion.div
-        initial={{ opacity: 0, y: 60 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
-        className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12"
-      >
-        <div className="flex-1 cursor-pointer">
-  <div className="flex items-center gap-4 mb-6">
-    <a
-      href="https://github.com/Aminhafis/agent_distribution_app"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="bg-white text-gray-800 rounded-full p-3 hover:scale-105 transition"
-    >
-      <Github size={24} />
-    </a>
-    <a
-      href="https://agent-distribution-app.vercel.app/"
-      rel="noopener noreferrer"
-      className="bg-white text-gray-800 rounded-full p-3 hover:scale-105 transition"
-    >
-      <LinkIcon size={24} />
-    </a>
-  </div>
-
-  <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight hover:text-neutral-300">
-    Agent Distribution App
-  </h2>
-
-  <p className="text-lg md:text-xl mb-6 text-gray-300">
-  Developed a responsive platform to upload and manage contact lists, validate data, and smartly distribute leads among agents — featuring smooth video previews and a futuristic white–black UI.  </p>
-
-  <p className="uppercase tracking-wider text-gray-400 hover:text-green-500">
-    React &nbsp; • &nbsp; Vite &nbsp; • &nbsp; Node.js &nbsp; • &nbsp; Express.js &nbsp; • &nbsp; MongoDB &nbsp; • &nbsp; Tailwind CSS
-  </p>
-</div>
-
-{/* Image Section */}
-<div className="flex-1">
-  <motion.img
-    src={agentDistribution}  // Ensure this is a screenshot of your A-flix app (e.g., intro screen or movie grid)
-    alt="Agent Distribution App Screenshot"
-    className="rounded-xl shadow-lg w-full object-cover"
-    whileHover={{ scale: 1.02 }}
-    transition={{ type: "spring", stiffness: 100 }}
-  />
-</div>
-
-      </motion.div>
+      </div>
     </section>
   );
 }
